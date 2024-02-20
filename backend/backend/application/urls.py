@@ -15,8 +15,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django_serializer.v2.swagger.views import index as swagger_index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(
+        "api/",
+        include(
+            [
+                path(
+                    "user.",
+                    include("backend.user.urls"),
+                ),
+                path("swagger.json", swagger_index),
+            ]
+        ),
+    ),
 ]
