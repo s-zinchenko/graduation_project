@@ -1,8 +1,8 @@
 import logging
 import os
-import sys
 
 import environ
+from django.db.models.fields import BigAutoField
 from django.forms import ChoiceField, FileField, JSONField
 from django.utils.functional import SimpleLazyObject
 from marshmallow import fields
@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 ]
 
 PROJECT_APPS = [
-    "backend.share",
+    "backend.user",
 ]
 
 
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "yareviews.application.wsgi.application"
+WSGI_APPLICATION = "backend.application.wsgi.application"
 
 DATABASES = {
     "default": {
@@ -89,7 +89,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "core.User"
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+)
+
+
+AUTH_USER_MODEL = "user.User"
 
 LANGUAGE_CODE = "ru-RU"
 TIME_ZONE = "Europe/Moscow"
@@ -143,6 +148,7 @@ TESTS_DATA_DIR = os.path.join(BASE_DIR, "tests", "data")
 
 def get_serializer_form_field() -> dict:
     return {
+        BigAutoField: fields.Integer,
         FileField: fields.Str,
         ChoiceField: fields.Str,
         JSONField: fields.Raw,
