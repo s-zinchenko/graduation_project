@@ -19,7 +19,6 @@ class UserLoginView(ApiView):
         tags = ["user"]
         method = HttpMethod.POST
         body_form = UsernamePasswordForm
-        # serializer = UserSerializer
         serializer = Serializer
 
     def execute(self, request: WSGIRequest, *args: Any, **kwargs: Any) -> User:

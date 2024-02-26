@@ -33,6 +33,7 @@ INSTALLED_APPS = [
 
 PROJECT_APPS = [
     "backend.user",
+    "backend.databases",
 ]
 
 
