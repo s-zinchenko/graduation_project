@@ -32,6 +32,10 @@ urlpatterns = [
                     "databases.",
                     include("backend.databases.urls"),
                 ),
+                path(
+                    "course.",
+                    include("backend.course.urls"),
+                ),
                 path("swagger.json", swagger_index),
             ]
         ),

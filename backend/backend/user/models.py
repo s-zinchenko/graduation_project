@@ -1,6 +1,9 @@
 # type: ignore
+import uuid
 from typing import Dict
 
+from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.db import models
@@ -67,9 +70,64 @@ class User(AbstractBaseUser, PermissionsMixin):
             "Unselect this instead of deleting accounts."
         ),
     )
+    is_teacher = models.BooleanField(default=False, verbose_name="Преподаватель")
     date_joined = models.DateTimeField(_("date joined"), default=timezone.now)
+    inviter = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.DO_NOTHING,
+        verbose_name="Пригласивший",
+        null=True,
+        blank=True,
+    )
 
     USERNAME_FIELD = "username"
 
     def __str__(self) -> str:
         return f"{self.id}: {self.username}"
+
+
+class LazyUserManager(models.Manager):
+    def __hash__(self):
+        """
+        Implemented so signal can be sent in .convert() for Django 1.8
+        """
+        return hash(str(self))
+
+    user_model = get_user_model()
+    username_field = user_model.USERNAME_FIELD
+
+    def create_lazy_user(self):
+        user_class = self.user_model
+        username = self.generate_username(user_class)
+        user = user_class.objects.create_user(username, "")
+        self.create(user=user)
+        return user, username
+
+    def generate_username(self, user_class):
+        max_length = user_class._meta.get_field(self.username_field).max_length
+        return uuid.uuid4().hex[:max_length]
+
+
+class LazyUser(models.Model):
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE
+    )
+    created = models.DateTimeField(default=timezone.now)
+    objects = LazyUserManager()
+
+    def __str__(self):
+        return "{0}:{1}".format(self.user, self.created)
+
+
+class InviteLink(models.Model):
+    class Meta:
+        verbose_name = "Ссылка для регистрации"
+        verbose_name_plural = "Ссылки для регистрации"
+
+    code = models.CharField(max_length=64, unique=True, verbose_name="Ссылка для приглашения")
+    is_active = models.BooleanField(default=True)
+    created = models.DateTimeField(default=timezone.now)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"Ссылка {self.code} пользователя {self.author_id}"

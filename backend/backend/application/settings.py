@@ -29,11 +29,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_celery_beat",
 ]
 
 PROJECT_APPS = [
     "backend.user",
     "backend.databases",
+    "backend.course",
 ]
 
 
@@ -90,10 +92,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LAZY_SIGNUP_BACKEND = "backend.user.backends.LazySignupBackend"
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
+    LAZY_SIGNUP_BACKEND,
 )
-
 
 AUTH_USER_MODEL = "user.User"
 
@@ -170,7 +173,7 @@ MAX_NEGATIVE_RATE = env("MAX_NEGATIVE_RATE", default=3)
 MAX_PHOTO_LENGTH = env("MAX_PHOTO_LENGTH", default=15)
 
 # CELERY SETTINGS
-CELERY_BROKER_URL = env.str("CELERY_BROKER_URL", default="amqp://localhost")
+CELERY_BROKER_URL = "redis://127.0.0.1:6379/0"
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
@@ -179,3 +182,8 @@ MAX_SEND_NOTIFICATION_RETRIES = env.str(
     "MAX_SEND_NOTIFICATION_RETRIES", default=2
 )
 CELERY_TIMEZONE = "Europe/Moscow"
+
+
+# APPLICATION SETTINGS
+USER_DATABASE_SSESSION_ACTIVE_HOURS = env.int("USER_DATABASE_SSESSION_LIFESPAN", default=12)
+USER_DATABASE_SSESSION_OPERATIONS_COUNT = env.int("USER_DATABASE_SSESSION_OPERATIONS_COUNT", default=100)

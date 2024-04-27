@@ -7,3 +7,7 @@ class UsernameForm(forms.Form):
 
 class UsernamePasswordForm(UsernameForm):
     password = forms.CharField()
+
+
+class UserRegistrationForm(forms.Form):
+    link = forms.CharField(max_length=128, required=False)

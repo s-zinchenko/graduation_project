@@ -274,3 +274,12 @@ class DatabasesListItemSerializer(Serializer):
 
 class DatabasesListSerializer(Serializer):
     items = fields.Nested(DatabasesListItemSerializer(), many=True)
+
+
+class ExecuteQuerySerializer(Serializer):
+    columns = fields.List(fields.Str())
+    rows = fields.List(fields.Dict())
+
+
+class IsActiveSerializer(Serializer):
+    is_active = fields.Bool()
