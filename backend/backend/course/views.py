@@ -79,8 +79,8 @@ class TaskAnswerView(LazyLoginMixin, ApiView):
                 task_id=practical_task.id,
                 defaults={"status": UserTask.Status.IN_PROGRESS},
             )
-            # if user_task.status == UserTask.Status.COMPLETED:
-            #     raise HttpError(http_code=400, alias="bad_request", description="Task already completed")
+            if user_task.status == UserTask.Status.COMPLETED:
+                raise HttpError(http_code=400, alias="bad_request", description="Task already completed")
 
             user_database_session = UserDatabaseSession.objects.filter(
                 user_id=request.user.id,
@@ -99,6 +99,7 @@ class TaskAnswerView(LazyLoginMixin, ApiView):
                 user_answer_tokens_set = set(self.request_body["answer"].lower().split())
                 if correct_solution_tokens_set == user_answer_tokens_set:
                     query_result = execute_query_at_sandbox(f"{practical_task.database.name}_{request.user.id}", self.request_body["answer"])
+                    # query_result = execute_query_at_sandbox(practical_task.database.name, self.request_body["answer"])
                     if query_result == practical_task.result:
                         is_correct = True
             else:

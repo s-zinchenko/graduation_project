@@ -1,0 +1,87 @@
+/*!* Общие стили *!*/
+/*body {*/
+/*  font-family: Arial, sans-serif;*/
+/*  margin: 0;*/
+/*  padding: 20px;*/
+/*}*/
+
+/*h1, h2, h3, h4 {*/
+/*  margin-top: 0;*/
+/*}*/
+
+/*!* Контейнер для ER-диаграммы *!*/
+/*.erd-container {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  align-items: center;*/
+/*}*/
+
+/*!* Контейнеры для таблиц и отношений *!*/
+/*.tables-container,*/
+/*.relations-container {*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: center;*/
+/*  margin-top: 20px;*/
+/*}*/
+
+/*!* Контейнер для таблицы *!*/
+/*.table-container {*/
+/*  background-color: #f2f2f2;*/
+/*  border: 1px solid #ddd;*/
+/*  border-radius: 4px;*/
+/*  padding: 10px;*/
+/*  margin: 10px;*/
+/*  width: 300px;*/
+/*}*/
+
+/*!* Заголовок таблицы *!*/
+/*.table-header {*/
+/*  margin-bottom: 10px;*/
+/*}*/
+
+/*!* Стили для таблиц *!*/
+/*table {*/
+/*  width: 100%;*/
+/*  border-collapse: collapse;*/
+/*}*/
+
+/*th, td {*/
+/*  padding: 8px;*/
+/*  text-align: left;*/
+/*  border-bottom: 1px solid #ddd;*/
+/*}*/
+
+/*th {  background-color: #e6e6e6;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*!* Контейнер для отношения *!*/
+/*.relation-container {*/
+/*  background-color: #f9f9f9;*/
+/*  border: 1px solid #ddd;*/
+/*  border-radius: 4px;*/
+/*  padding: 10px;*/
+/*  margin: 10px;*/
+/*  width: 300px;*/
+/*}*/
+
+/*!* Заголовок отношения *!*/
+/*.relation-header {*/
+/*  margin-bottom: 10px;*/
+/*}*/
+
+/*!* Тело отношения *!*/
+/*.relation-body {*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*}*/
+
+/*!* Стили для таблиц и полей в отношениях *!*/
+/*.relation-table {*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*.relation-field {*/
+/*  color: #666;*/
+/*}*/

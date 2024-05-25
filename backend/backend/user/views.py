@@ -14,8 +14,10 @@ from django_serializer.v2.views import ApiView, HttpMethod
 from backend.course.models import UserTask
 from backend.user.errors import UnauthorizedError, NotUniqueUsernameError
 from backend.user.forms import UsernamePasswordForm, UsernameForm, UserRegistrationForm
+from backend.user.mixins import LazyLoginMixin
 from backend.user.models import User, InviteLink
 from backend.user.serializers import UserSerializer, UserStatSerializer
+from backend.user.utils import is_lazy_user
 
 
 class UserLoginView(ApiView):
@@ -68,20 +70,21 @@ class UserRegistrationView(ApiView):
         return user
 
 
-class UserCurrentView(ApiView):
+class UserCurrentView(LazyLoginMixin, ApiView):
     class Meta:
         tags = ["user"]
         method = HttpMethod.GET
-        query_form = UsernameForm
+        # query_form = UsernameForm
         serializer = UserSerializer
 
     def execute(self, request: WSGIRequest, *args: Any, **kwargs: Any) -> User:
-        user = User.objects.filter(
-            username=self.request_query["username"],
-        ).first()
-        if not user:
-            raise NotFoundError
-
+        # user = User.objects.filter(
+        #     username=self.request_query["username"],
+        # ).first()
+        # if not user:
+        #     raise NotFoundError
+        user = self.request.user
+        user.is_lazy = is_lazy_user(user)
         return user
 
 
@@ -97,6 +100,6 @@ class UserStatView(ApiView):
         user_stats = UserTask.objects.filter(
             user_id=self.request.user.id,
             status=UserTask.Status.COMPLETED,
-        ).values('updated_at').annotate(completed_tasks_count=Count('id'))
+        ).values('updated_at').annotate(count=Count('id'))
 
         return user_stats

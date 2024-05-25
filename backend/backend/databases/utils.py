@@ -122,7 +122,8 @@ def execute_query_at_sandbox(db_name: str, raw_query: str):
 def get_database_schema_from_psql(database_name: str = "aggregator"):
     # Выполняем команду psql для получения списка таблиц
     import subprocess
-    psql_list_tables = subprocess.Popen(['psql', '-d', database_name, '-c', '\dt'], stdout=subprocess.PIPE)
+    # psql_list_tables = subprocess.Popen(['psql', '-d', database_name, '-c', '\dt'], shell=True, executable='/bin/zsh', stdout=subprocess.PIPE, env={'PGPASSWORD': 'postgres', "PGUSER": "postgres", "PATH": "/Applications/Postgres.app/Contents/Versions/14/bin:$PATH"})
+    psql_list_tables = subprocess.Popen(f"psql -d {database_name} -c '\dt'", shell=True, executable='/bin/zsh', stdout=subprocess.PIPE, env={'PGPASSWORD': 'postgres', "PGUSER": "postgres", "PATH": "/Applications/Postgres.app/Contents/Versions/14/bin:$PATH"})
     output_list_tables = psql_list_tables.communicate()[0]
 
     # Парсим вывод и находим строки с информацией о таблицах
@@ -156,7 +157,7 @@ def get_database_schema_from_psql(database_name: str = "aggregator"):
         }
 
         # Выполняем команду psql для получения списка столбцов таблицы
-        psql_list_columns = subprocess.Popen(['psql', '-d', database_name, '-c', f'\\d {table_name}'], stdout=subprocess.PIPE)
+        psql_list_columns = subprocess.Popen(f"psql -d {database_name} -c '\d {table_name}'", stdout=subprocess.PIPE, shell=True, executable='/bin/zsh', env={'PGPASSWORD': 'postgres', "PGUSER": "postgres", "PATH": "/Applications/Postgres.app/Contents/Versions/14/bin:$PATH"})
         output_list_columns = psql_list_columns.communicate()[0].decode(sys.stdout.encoding)
 
         matches_columns = [column_row.split("|") for column_row in output_list_columns.split("\n")[1:]]
@@ -228,13 +229,15 @@ def create_db_from_dump(file):
     file.name = file.name.replace('-', '_')
     db_name, extension = file.name.split('.')
     with open(os.path.join("/tmp", file.name), "wb") as f:
-            f.write(file.read())
+        f.write(file.read())
 
     import subprocess
     path = os.path.join("/tmp", file.name)
     subprocess.call(['ls'], stdout=subprocess.PIPE)
-    subprocess.call(['psql', '-U', "postgres", '-c', f'create database {db_name}', ], stdout=subprocess.PIPE)
-    load_dump = subprocess.Popen(f"psql {db_name} < {path}", shell=True, env={'PGPASSWORD': 'postgres', "PGUSER": "postgres", "PATH": "/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"})
+    # subprocess.call(['psql', '-U', 'postgres', '-c', f'create database {db_name}', ], stdout=subprocess.PIPE, shell=True, executable='/bin/zsh', env={'PGPASSWORD': 'postgres', "PGUSER": "postgres", "PATH": "/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"})
+    # subprocess.call(['psql', '-c', f'create database {db_name}', ], stdout=subprocess.PIPE, shell=True, executable='/bin/zsh', )
+    subprocess.call(['psql', '-c', f"create database {db_name}", ], stdout=subprocess.PIPE, env={'PGPASSWORD': 'postgres', "PGUSER": "postgres", "PATH": "/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"})
+    load_dump = subprocess.Popen(f"psql -U postgres {db_name} < {path}", shell=True, executable='/bin/zsh', env={'PGPASSWORD': 'postgres', "PGUSER": "postgres", "PATH": "/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"})
     os.waitpid(load_dump.pid, 0)
 
     os.remove(os.path.join("/tmp", file.name))

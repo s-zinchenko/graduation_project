@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9e7591f4-8350-41c6-af02-0e98e8c5e901" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../backend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/AuthModal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/AuthModal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ERDiagram.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/ERDiagram.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Sandbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Sandbox.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/SandboxEditor.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/TableNode.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/TableNode.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/TaskDetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/TaskList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/application/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/application/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/course/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/user/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/user/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frontsql.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SqlEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TaskEditor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TaskDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TaskDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TaskList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TaskList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2g9RRY3anubpuefBCHeMTuzVREG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/svzinchenko/Desktop/Developer/graduation_project/frontsql&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/PyCharm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9e7591f4-8350-41c6-af02-0e98e8c5e901" name="Changes" comment="" />
+      <created>1715107798855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715107798855</updated>
+      <workItem from="1715107800583" duration="22000" />
+      <workItem from="1715107850613" duration="7000" />
+      <workItem from="1715107879811" duration="1175000" />
+      <workItem from="1715243291076" duration="3302000" />
+      <workItem from="1715343873196" duration="689000" />
+      <workItem from="1715357751631" duration="24000" />
+      <workItem from="1715357788476" duration="9249000" />
+      <workItem from="1715420247073" duration="14731000" />
+      <workItem from="1715509161576" duration="13726000" />
+      <workItem from="1715620529894" duration="4792000" />
+      <workItem from="1715693709776" duration="769000" />
+      <workItem from="1715782010381" duration="10663000" />
+      <workItem from="1715884807196" duration="4986000" />
+      <workItem from="1716024273417" duration="16874000" />
+      <workItem from="1716045665206" duration="6935000" />
+      <workItem from="1716110337419" duration="9597000" />
+      <workItem from="1716303205208" duration="1140000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/Sandbox.jsx</url>
+          <line>35</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/Sandbox.jsx</url>
+          <line>44</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/SandboxEditor.jsx</url>
+          <line>9</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Components/TaskEditor.jsx</url>
+          <line>172</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

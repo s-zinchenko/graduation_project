@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d8e5dcf-173e-4f20-ac83-8018ecc8b1a5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/AuthModal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/AuthModal.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/ERDiagram.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/ERDiagram.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Profile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Sandbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Sandbox.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/SandboxEditor.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/TableNode.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/TableNode.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskDetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/src/setupProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/application/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/application/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/course/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/databases/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/databases/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/databases/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/databases/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/user/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/user/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/frontsql.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/Button.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/SqlEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskEditor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/TaskDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskDetails.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/TaskList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2g9RMAjE4CizsBiDGucNFqAar4g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/svzinchenko/Desktop/Developer/graduation_project/backend&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="backend.application.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/Library/Caches/pypoetry/virtualenvs/backend-hzBGMJgN-py3.12/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="localhost" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d8e5dcf-173e-4f20-ac83-8018ecc8b1a5" name="Changes" comment="" />
+      <created>1715107756860</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715107756860</updated>
+      <workItem from="1715107758045" duration="91000" />
+      <workItem from="1715107860639" duration="1903000" />
+      <workItem from="1715243271062" duration="4045000" />
+      <workItem from="1715249971914" duration="4745000" />
+      <workItem from="1715343795203" duration="787000" />
+      <workItem from="1715357752393" duration="24000" />
+      <workItem from="1715357790901" duration="4633000" />
+      <workItem from="1715420200953" duration="45000" />
+      <workItem from="1715420396895" duration="2835000" />
+      <workItem from="1715509162089" duration="776000" />
+      <workItem from="1715620505336" duration="507000" />
+      <workItem from="1715693667388" duration="1171000" />
+      <workItem from="1715781991192" duration="876000" />
+      <workItem from="1715884830641" duration="556000" />
+      <workItem from="1716024260659" duration="1024000" />
+      <workItem from="1716045665770" duration="6184000" />
+      <workItem from="1716110319905" duration="3345000" />
+      <workItem from="1716303246882" duration="955000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/models.py</url>
+          <line>7</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/utils.py</url>
+          <line>130</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/utils.py</url>
+          <line>244</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/utils.py</url>
+          <line>239</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/admin.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/utils.py</url>
+          <line>235</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/utils.py</url>
+          <line>126</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/utils.py</url>
+          <line>133</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/utils.py</url>
+          <line>129</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/utils.py</url>
+          <line>223</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/course/views.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/course/views.py</url>
+          <line>102</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/views.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/views.py</url>
+          <line>124</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/views.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,365 @@
+/*.modal {*/
+/*  display: block;*/
+/*  position: fixed;*/
+/*  z-index: 1;*/
+/*  left: 0;*/
+/*  top: 0;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  overflow: auto;*/
+/*  background-color: rgba(0, 0, 0, 0.4);*/
+/*}*/
+
+/*.modal-content {*/
+/*  background-color: #fefefe;*/
+/*  margin: 15% auto;*/
+/*  padding: 20px;*/
+/*  border: 1px solid #888;*/
+/*  width: 30%;*/
+/*}*/
+
+/*.close {*/
+/*  color: #aaa;*/
+/*  float: right;*/
+/*  font-size: 28px;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*.close:hover,*/
+/*.close:focus {*/
+/*  color: black;*/
+/*  text-decoration: none;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.auth-options {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  margin-bottom: 20px;*/
+/*}*/
+
+/*.auth-options button {*/
+/*  margin: 0 10px;*/
+/*}*/
+
+  body {
+    color:var(--text-color-primary);
+    font-size:16px;
+    font-family:var(--font-500);
+  }
+body {
+    margin: 0;
+    color: var(--text-color-primary);
+    font-size: 16px;
+    font-family: var(--font-500);
+}
+
+body {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-500: "font500","Arial";
+    --font-700: "font700","Arial";
+    --primary-gradient: linear-gradient(0.25turn,#1560ebf0,#1357d2f0);
+    --dark-blue-gradient: linear-gradient(0.25turn,#0550db,#0346c2);
+    --link-color: #1357d2;
+    --text-color-primary: #333;
+    --indent-xs: 4px;
+    --indent-m: 12px;
+    --indent-l: 16px;
+}
+
+.ReactModal__Overlay {
+    z-index: 1001;
+    background-color: rgba(0,0,0,.5)!important;
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity .3s ease;
+    z-index: 1001;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.info-modal .close-modal  {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.info-modal .modal__wrapper  {
+    padding: 0 5px;
+}
+
+.svg-inline--fa {
+    display: var(--fa-display,inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+}
+
+.info-modal .close-modal__icon  {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+}
+
+svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa {
+    overflow: visible;
+    box-sizing: content-box;
+}
+
+.info-modal .modal__wrapper .title  {
+    color: var(--text-color-primary);
+    font-family: var(--font-700);
+    font-size: 1.3rem;
+}
+
+.ehhlUV {
+    height: var(--indent-l);
+}
+
+.auth-modal {
+    font-family: var(--font-500);
+    width: 280px;
+}
+
+.auth-modal .auth-split  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-modal .auth-split::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    position: absolute;
+}
+
+.auth-modal .social-buttons  {
+    display: flex;
+    column-gap: var(--indent-m);
+}
+
+.terms-of-use {
+    color: #555;
+    font-family: var(--font-500);
+}
+
+.auth-modal .auth-split .text  {
+    position: relative;
+    color: #9ca8b4;
+    font-size: .75rem;
+    font-family: var(--font-500);
+    z-index: 1;
+    background-color: #fff;
+    padding: 0 6px;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.auth-modal .social-buttons .social-button  {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: 40px 40px;
+}
+
+.auth-modal .social-buttons .social-button_vk  {
+    background-color: #016297;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='16 -16 49 48'%3E%3Cpath d='M41.8 15.9s.5-.1.7-.3c.2-.2.2-.6.2-.6s0-2 1-2.3c1-.3 2.3 1.9 3.6 2.7 1 .6 1.8.5 1.8.5h3.6s1.9-.1 1-1.5c-.1-.1-.5-1-2.7-2.8-2.3-1.9-2-1.6.8-4.9 1.7-2 2.3-3.2 2.1-3.8-.2-.5-1.4-.4-1.4-.4h-4.1s-.3 0-.5.1-.4.4-.4.4-.5 1.7-1.4 3c-1.8 2.8-2.5 2.9-2.8 2.8-.7-.4-.5-1.6-.5-2.5 0-2.7.5-3.8-.9-4.1-.5-.1-.8-.2-1.9-.2-1.4 0-2.7 0-3.4.3-.4.2-.8.7-.6.7.3 0 .9.1 1.2.5.4.5.4 1.7.4 1.7s.2 3.2-.6 3.6c-.5.3-1.3-.3-2.9-2.8-.8-1.3-1.4-2.7-1.4-2.7s-.1-.3-.3-.5c-.3-.2-.6-.2-.6-.2h-3.9s-.6 0-.8.2c-.2.2 0 .6 0 .6s3 6.4 6.4 9.7c3.1 3 6.7 2.8 6.7 2.8h1.6z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.auth-modal .social-buttons .social-button_google  {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='36' height='36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18 36a18 18 0 1 0 0-36 18 18 0 0 0 0 36z' fill='%234285F4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M27.77 16.1h-9.54v4.05h5.5c-.52 2.58-2.66 4.05-5.5 4.05A6.11 6.11 0 0 1 12.2 18c0-3.44 2.7-6.2 6.04-6.2 1.44 0 2.75.52 3.77 1.38l2.98-3.05a10.04 10.04 0 0 0-6.75-2.63A10.34 10.34 0 0 0 8 18c0 5.82 4.56 10.5 10.23 10.5C23.35 28.5 28 24.68 28 18c0-.62-.1-1.29-.23-1.9z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.auth-modal .auth-local .auth-form .input-group  {
+    position: relative;
+    font-family: var(--font-500);
+    display: flex;
+    flex-direction: column;
+}
+
+.iAMgQU {
+    height: var(--indent-m);
+}
+
+.euvyga {
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    color: rgb(102, 102, 102);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.05em;
+    font-family: var(--font-500);
+}
+
+.hSLcIi {
+    height: var(--indent-xs);
+}
+
+.auth-modal .auth-local .auth-form .input-group .valid-error  {
+    font-size: .85em;
+    color: #fa0001;
+}
+
+.dFMpRu:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: var(--primary-gradient);
+    pointer-events: all !important;
+}
+
+@media (hover: hover){
+  .dFMpRu:hover {
+    box-shadow: rgba(33, 33, 33, 0.2) 0px 4px 8px;
+    background: var(--dark-blue-gradient);
+  }
+}
+
+.auth-modal .auth-local .switch-form-container  {
+    display: flex;
+    align-items: center;
+    font-size: .95rem;
+}
+
+.jJuENG {
+    padding: 8px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.khsHpT {
+    width: var(--indent-xs);
+}
+
+.auth-modal .auth-local .switch-form-container .switch-form-button  {
+    padding: 0;
+}
+
+@media (hover: hover){
+  .jWdkTB:hover {
+    box-shadow: none;
+    background: transparent;
+  }
+}
+
+.iEnqmq {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.isesWM {
+    padding: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-2CQkf.style-2CQkf {
+   position: fixed;
+    inset: 0px;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#style-UAaCn.style-UAaCn {
+   position: relative;
+    inset: 0px;
+    border: none;
+    background: rgb(255, 255, 255);
+    overflow: visible;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px;
+}
+#style-RX74V.style-RX74V {
+   width: 100%;
+}
+#style-nNqFp.style-nNqFp {
+   opacity: 1;
+}
+#style-wPqO7.style-wPqO7 {
+   opacity: 1;
+}
+
+.rc-dropdown {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    z-index: 1070;
+    display: block;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.header_dropdown_items {
+    position: fixed;
+}
+
+.diwMYY {
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 0px 0px 7px 7px;
+    box-shadow: rgba(33, 33, 33, 0.08) 0px 8px 8px;
+    min-width: 200px;
+    margin-top: -4px;
+    padding: 6px 0px;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.diwMYY a  {
+    color: inherit;
+    text-decoration: none;
+}
+
+.kELiVg {
+    font-size: 1.05rem;
+    font-family: var(--font-500);
+    display: block;
+    text-align: center;
+    padding: 15px 0px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out 0s;
+}
+
+.kELiVg:hover {
+    background: rgba(14, 19, 24, 0.05);
+}
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-4S4VF.style-4S4VF {
+   min-width: 90px;
+    left: 1256px;
+    top: 69px;
+}

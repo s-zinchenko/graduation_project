@@ -72,21 +72,24 @@ TEMPLATES = [
     },
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
+# SESSION_COOKIE_HTTPONLY = False
+# SESSION_COOKIE_SAMESITE = 'None'
+# SESSION_COOKIE_SAMESITE = 'strict'
 
 WSGI_APPLICATION = "backend.application.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "db.sqlite3",
-        # "ENGINE": "django.db.backends.postgresql_psycopg2",
-        # "NAME": env.str("DATABASE_NAME", default=""),
-        # "USER": env.str("DATABASE_USER", default=""),
-        # "PASSWORD": env.str("DATABASE_PASSWORD", default=""),
-        # "HOST": env.str("DATABASE_HOST", default="127.0.0.1"),
-        # "PORT": env.int("DATABASE_PORT", default="5432"),
-        # "TEST": {"CHARSET": "UTF8", "TEMPLATE": "template0"},
+        # "ENGINE": "django.db.backends.sqlite3",
+        # "NAME": "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": env.str("DATABASE_NAME", default="graduation_backend"),
+        "USER": env.str("DATABASE_USER", default="postgres"),
+        "PASSWORD": env.str("DATABASE_PASSWORD", default="postgres"),
+        "HOST": env.str("DATABASE_HOST", default="127.0.0.1"),
+        "PORT": env.int("DATABASE_PORT", default="5432"),
+        "TEST": {"CHARSET": "UTF8", "TEMPLATE": "template0"},
     },
 }
 

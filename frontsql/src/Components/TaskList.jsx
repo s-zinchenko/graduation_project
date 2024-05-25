@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link, useLocation, useSearchParams} from 'react-router-dom';
+import './TaskList.css'
+import Header from "./Header";
 
 const TaskList = () => {
     const [tasks, setTasks] = useState([]);
@@ -16,7 +18,7 @@ const TaskList = () => {
             "hard": 3
         }
         try {
-            let task_url = 'http://127.0.0.1:8000/api/course.tasks?';
+            let task_url = '/api/course.tasks?';
             const difficulty = searchParams.get('difficulty');
 
             if (difficulty) {
@@ -71,76 +73,113 @@ const TaskList = () => {
     };
 
     const back_front_task_difficulty_map = {
-      "1": "easy",
-      "2": "medium",
-      "3": "hard"
+        "1": "easy",
+        "2": "medium",
+        "3": "hard"
     }
 
     return (
+        <div className="trainer-tasks snipcss0-0-0-1 snipcss-xA1nU">
+        <Header/>
         <div className="wrapper">
-            <div className="title-container">
-                <div className="title">Доступные задания</div>
-            </div>
-            <div className="tasks-container">
-                <div className="task-list">
+            <div className="main-container snipcss0-2-32-33">
+                <div className="title-container snipcss0-3-33-34">
+                    <div className="title snipcss0-4-34-35">Доступные задания</div>
+                    </div>
+                <div height="var(--indent-l)" className="sc-edce251-0 ehhlUV snipcss0-3-33-42"></div>
+
+            <div className="tasks snipcss0-3-33-43">
+                <div className="tasks__loading-container snipcss0-4-43-44">
                     {tasks.map((task) => (
-                        <div className="task-card">
-                            <div className="task-header">
-                                <Link to={`/tasks/${task.id}`}># {task.id}</Link>
-
-                            </div>
-                            <p className="task-description">
-                                {task.question}
-                            </p>
-                            <div className="task-footer">
-                                <span data-difficulty={back_front_task_difficulty_map[task.difficulty]} className="dot"></span>
-                            </div>
-
+                        <a target="_blank" className="trainer-list-task snipcss0-5-44-77" href={`/tasks/${task.id}`}>
+                        {/*<Link to={`/tasks/${task.id}`}># {task.id}</Link>*/}
+                        <div className="trainer-list-task__question snipcss0-6-77-78">{task.question}</div>
+                        <div height="var(--indent-m)" className="sc-edce251-0 iAMgQU snipcss0-6-77-79"></div>
+                        <div className="trainer-list-task__params snipcss0-6-77-80">
+                        <div data-tip="Лёгкая" className="difficulty-indicator snipcss0-7-80-81"
+                        currentitem="false">
+                            {(() => {
+                                if (task.difficulty === '1') {
+                                    return (
+                                        <>
+                                            <div className="dot easy snipcss0-12-22-23"></div>
+                                            <div className="dot snipcss0-12-22-24"></div>
+                                            <div className="dot snipcss0-12-22-25"></div>
+                                        </>
+                                    )
+                                }
+                                if (task.difficulty === '2') {
+                                    return (
+                                        <>
+                                            <div className="dot medium snipcss0-12-22-23"></div>
+                                            <div className="dot medium snipcss0-12-22-24"></div>
+                                            <div className="dot snipcss0-12-22-25"></div>
+                                        </>
+                                    )
+                                }
+                                if (task.difficulty === '3') {
+                                    return (
+                                        <>
+                                            <div className="dot hard snipcss0-12-22-23"></div>
+                                            <div className="dot hard snipcss0-12-22-24"></div>
+                                            <div className="dot hard snipcss0-12-22-25"></div>
+                                        </>
+                                    )
+                                }
+                            })()}
                         </div>
-                    ))}
-                </div>
-
-
-                <div className="filters">
-                    <div className="filter-group">
-                        <div className="checker-filter__title">Статус</div>
-                        <div className="checker-filter__field"><input type="checkbox" id="solved" name="status"
-                                                                      value="completed"
-                                                                      onChange={handleFilterChange}
-                                                                      checked={searchParams.getAll('status').includes('completed')}/><label
-                        >Решённые</label></div>
-                        <div className="checker-filter__field"><input
-                            id="unsolved" type="checkbox" name="status" value="not_started"
-                            onChange={handleFilterChange}
-                            checked={searchParams.getAll('status').includes('not_started')}/><label
-                        >Нерешённые</label></div>
-                    </div>
-
-                    <div className="filter-group">
-                        <div className="checker-filter__title">Сложность</div>
-                        <div className="checker-filter__field"><label>
-                            <input type="checkbox" name="difficulty" value="easy"
-                                   onChange={handleFilterChange}
-                                   checked={searchParams.getAll('difficulty').includes('easy')}/>
-                            Easy
-                        </label>
+                        <div width="var(--indent-m)" className="sc-edce251-0 kUzPR snipcss0-7-80-85"></div>
+                        <div className="trainer-list-task__status snipcss0-7-80-87"></div>
                         </div>
-                        <div className="checker-filter__field"><label>
-                            <input type="checkbox" name="difficulty" value="medium"
-                                   onChange={handleFilterChange}
-                                   checked={searchParams.getAll('difficulty').includes('medium')}/>
-                            Medium
-                        </label></div>
-                        <div className="checker-filter__field"><label>
-                            <input type="checkbox" name="difficulty" value="hard"
-                                   onChange={handleFilterChange}
-                                   checked={searchParams.getAll('difficulty').includes('hard')}/>
-                            Hard
-                        </label></div>
-                    </div>
-                </div>
+                        </a>
 
+                        ))}
+
+
+                </div>
             </div>
+            </div>
+
+            <div className="sidebar">
+                <div className="filters">
+                    <div className="checker-filter">
+                        <div className="checker-filter__title">Статус</div>
+                        <div className="checker-filter__field">
+                            <input type="checkbox" id="solved" name="status" value="completed"
+                                   onChange={handleFilterChange}
+                                   checked={searchParams.getAll('status').includes('completed')}/>
+                            <label htmlFor="solved">Решённые</label>
+                        </div>
+                        <div className="checker-filter__field">
+                            <input id="unsolved" type="checkbox" name="status" value="not_started"
+                                   onChange={handleFilterChange}
+                                   checked={searchParams.getAll('status').includes('not_started')}/>
+                            <label htmlFor="unsolved">Нерешённые</label>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="checker-filter">
+                        <div className="checker-filter__title">Сложность</div>
+                        <div className="checker-filter__field">
+                            <input type="checkbox" name="difficulty" value="easy" onChange={handleFilterChange}
+                                   checked={searchParams.getAll('difficulty').includes('easy')}/>
+                            <label htmlFor="easy">Лёгкие</label>
+                        </div>
+                        <div className="checker-filter__field">
+                            <input type="checkbox" name="difficulty" value="medium" onChange={handleFilterChange}
+                                   checked={searchParams.getAll('difficulty').includes('medium')}/>
+                            <label htmlFor="medium">Средние</label>
+                        </div>
+                        <div className="checker-filter__field">
+                            <input type="checkbox" name="difficulty" value="hard" onChange={handleFilterChange}
+                                   checked={searchParams.getAll('difficulty').includes('hard')}/>
+                            <label htmlFor="hard">Сложные</label>
+                        </div>
+                    </div>
+                    <hr/>
+                </div>
+            </div>
+        </div>
         </div>
     )
 }

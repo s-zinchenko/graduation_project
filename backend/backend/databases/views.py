@@ -1,18 +1,19 @@
 import re
-from typing import Any
+from typing import Any, Type
 
 from django.conf import settings
 from django.core.handlers.wsgi import WSGIRequest
+from django.db.models import Model
 from django.utils import timezone
 from django_serializer.v2.exceptions import NotFoundError
 from django_serializer.v2.exceptions.http import ForbiddenError
 from django_serializer.v2.serializer import Serializer
-from django_serializer.v2.views import ApiView, HttpMethod
+from django_serializer.v2.views import ApiView, HttpMethod, GetApiView
 
 from backend.databases.form import DatabaseForm, ExecuteQueryForm
 from backend.databases.models import Database, UserDatabaseSession
 from backend.databases.serializers import DatabasesListSerializer, ExecuteQuerySerializer, \
-    IsActiveSerializer
+    IsActiveSerializer, DatabasesListItemSerializer
 from backend.databases.tasks import cleanup_database
 from backend.databases.utils import execute_query_at_sandbox, create_user_database
 from backend.user.admin import User
@@ -38,10 +39,11 @@ class CreateUserDatabaseSessionView(LazyLoginMixin, ApiView):
         serializer = Serializer
 
     def has_permissions(self, db: Database, user: User) -> bool:
-        if db.author_id == user.inviter_id:
-            return True
-
-        return False
+        # if db.author_id == user.inviter_id:
+        #     return True
+        #
+        # return False
+        return True
 
     def execute(self, request: WSGIRequest, *args: Any, **kwargs: Any) -> dict:
         database_id = self.request_body["database"]
@@ -101,6 +103,7 @@ class ExecuteQueryView(LazyLoginMixin, ApiView):
         session.save()
         db_name = Database.objects.get(id=database_id).name
         query_result = execute_query_at_sandbox(f"{db_name}_{user_id}", query)
+        # query_result = execute_query_at_sandbox(db_name, query)
         return query_result
 
 
@@ -118,6 +121,7 @@ class CheckUserDatabaseSessionView(LazyLoginMixin, ApiView):
             expired_at__gte=timezone.now(),
         ).first()
 
+        is_active = True
         if not session:
             is_active = False
         elif session.operations_count == 0:
@@ -127,3 +131,13 @@ class CheckUserDatabaseSessionView(LazyLoginMixin, ApiView):
         return {"is_active": is_active}
 
 
+class DatabaseGetView(GetApiView):
+    class Meta:
+        tags = ["databases"]
+        model = Database
+        serializer = DatabasesListItemSerializer
+
+    def get_object(self):
+        m: Type[Model] = self.Meta.model
+        key: str = self.Meta.object_key
+        return m.objects.prefetch_related("table_set__prop_set").get(**{key: self.request_query[key]})

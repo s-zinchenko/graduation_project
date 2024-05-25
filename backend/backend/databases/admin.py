@@ -28,6 +28,7 @@ class DatabaseAdmin(admin.ModelAdmin):
             form = UploadDumpFile(request.POST, request.FILES)
             if form.is_valid():
                 db_name = create_db_from_dump(form.cleaned_data["dump_file"])
+                # db_name, _ = form.cleaned_data["dump_file"].name.split('.')
                 db_schema = get_database_schema_from_psql(db_name)
                 Database.objects.create_database_from_schema(db_schema)
 
