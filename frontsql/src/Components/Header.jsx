@@ -1,8 +1,20 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import AuthModal from "./AuthModal";
 
 const Header = () => {
+    const location = useLocation();
+
+    // Определяем текущую страницу
+    const currentPage = location.pathname;
+
+    // Функция для применения стилей к активному элементу меню
+    const getNavItemStyle = (path) => {
+    return currentPage === path
+        ? 'nav-item nav-item-active'
+        : 'nav-item';
+    };
+
     return (
         <>
             <header className="header snipcss-Bz6oc">
@@ -18,15 +30,15 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="header__logo">
-                        <Link className="logo-link" to="/">главная</Link>
+                        <Link className="logo-link" to="/">Главная</Link>
                     </div>
                     <div className="header__full-menu">
                         <nav className="header__nav">
                             <div className="nav-links">
-                                <a className="nav-item" href="/sandbox">
+                                <a className={getNavItemStyle('/sandbox')} href="/sandbox">
                                     <span>Песочница</span>
                                 </a>
-                                <Link className="nav-item" to="/tasks"><span>Тренажёр</span></Link>
+                                <Link className={getNavItemStyle('/tasks')} to="/tasks"><span>Тренажёр</span></Link>
                             </div>
                         </nav>
                         <AuthModal />

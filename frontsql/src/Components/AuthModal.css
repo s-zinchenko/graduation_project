@@ -104,7 +104,7 @@ body {
 }
 
 .svg-inline--fa {
-    display: var(--fa-display,inline-block);
+    /*display: var(--fa-display,inline-bloc/k);*/
     height: 1em;
     overflow: visible;
     vertical-align: -.125em;
@@ -230,10 +230,10 @@ a {
 }
 
 @media (hover: hover){
-  .dFMpRu:hover {
-    box-shadow: rgba(33, 33, 33, 0.2) 0px 4px 8px;
-    background: var(--dark-blue-gradient);
-  }
+  /*.dFMpRu:hover {*/
+  /*  box-shadow: rgba(33, 33, 33, 0.2) 0px 4px 8px;*/
+  /*  background: var(--dark-blue-gradient);*/
+  /*}*/
 }
 
 .auth-modal .auth-local .switch-form-container  {
@@ -362,4 +362,262 @@ a {
    min-width: 90px;
     left: 1256px;
     top: 69px;
+}
+
+.custom-auth-button {
+  /*display: inline-block;*/
+  /*padding: 10px 20px;*/
+    width: 90px;
+  border-radius: 10px;
+  background-color: #f0f0f0; /* Светло-серый цвет фона */
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.custom-auth-button:hover {
+    background-color: #444; /* Светло-черный цвет фона при наведении */
+  color: #fff;
+}
+
+  body {
+    color:var(--text-color-primary);
+    font-size:16px;
+    font-family:var(--font-500);
+  }
+body {
+    margin: 0;
+    color: var(--text-color-primary);
+    font-size: 16px;
+    font-family: var(--font-500);
+}
+
+body {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-500: "font500","Arial";
+    --font-700: "font700","Arial";
+    --dark-blue-gradient: linear-gradient(0.25turn,#0550db,#0346c2);
+    --link-color: #1357d2;
+    --text-color-primary: #333;
+    --indent-xs: 4px;
+    --indent-s: 6px;
+    --indent-m: 12px;
+    --indent-l: 16px;
+}
+
+.info-modal .close-modal  {
+    position: absolute;
+    right: -30px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.info-modal .modal__wrapper  {
+    padding: 0 5px;
+}
+
+.svg-inline--fa {
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
+}
+
+.info-modal .close-modal__icon  {
+    width: 24px;
+    height: 24px;
+    color: #fff;
+}
+
+svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa {
+    overflow: visible;
+    box-sizing: content-box;
+}
+
+.info-modal .modal__wrapper .title  {
+    color: var(--text-color-primary);
+    font-family: var(--font-700);
+    font-size: 1.3rem;
+}
+
+.ehhlUV {
+    height: var(--indent-l);
+}
+
+.auth-modal {
+    font-family: var(--font-500);
+    width: 280px;
+}
+
+.auth-modal .auth-split  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-modal .auth-split::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    position: absolute;
+}
+
+.auth-modal .social-buttons  {
+    display: flex;
+    column-gap: var(--indent-m);
+}
+
+.terms-of-use {
+    color: #555;
+    font-family: var(--font-500);
+}
+
+.auth-modal .auth-split .text  {
+    position: relative;
+    color: #9ca8b4;
+    font-size: .75rem;
+    font-family: var(--font-500);
+    z-index: 1;
+    background-color: #fff;
+    padding: 0 6px;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.social-button  {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-size: 40px 40px;
+}
+
+.social-button_vk  {
+    background-color: #016297;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='16 -16 49 48'%3E%3Cpath d='M41.8 15.9s.5-.1.7-.3c.2-.2.2-.6.2-.6s0-2 1-2.3c1-.3 2.3 1.9 3.6 2.7 1 .6 1.8.5 1.8.5h3.6s1.9-.1 1-1.5c-.1-.1-.5-1-2.7-2.8-2.3-1.9-2-1.6.8-4.9 1.7-2 2.3-3.2 2.1-3.8-.2-.5-1.4-.4-1.4-.4h-4.1s-.3 0-.5.1-.4.4-.4.4-.5 1.7-1.4 3c-1.8 2.8-2.5 2.9-2.8 2.8-.7-.4-.5-1.6-.5-2.5 0-2.7.5-3.8-.9-4.1-.5-.1-.8-.2-1.9-.2-1.4 0-2.7 0-3.4.3-.4.2-.8.7-.6.7.3 0 .9.1 1.2.5.4.5.4 1.7.4 1.7s.2 3.2-.6 3.6c-.5.3-1.3-.3-2.9-2.8-.8-1.3-1.4-2.7-1.4-2.7s-.1-.3-.3-.5c-.3-.2-.6-.2-.6-.2h-3.9s-.6 0-.8.2c-.2.2 0 .6 0 .6s3 6.4 6.4 9.7c3.1 3 6.7 2.8 6.7 2.8h1.6z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.social-button_google  {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='36' height='36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18 36a18 18 0 1 0 0-36 18 18 0 0 0 0 36z' fill='%234285F4'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M27.77 16.1h-9.54v4.05h5.5c-.52 2.58-2.66 4.05-5.5 4.05A6.11 6.11 0 0 1 12.2 18c0-3.44 2.7-6.2 6.04-6.2 1.44 0 2.75.52 3.77 1.38l2.98-3.05a10.04 10.04 0 0 0-6.75-2.63A10.34 10.34 0 0 0 8 18c0 5.82 4.56 10.5 10.23 10.5C23.35 28.5 28 24.68 28 18c0-.62-.1-1.29-.23-1.9z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.auth-modal .auth-local .auth-form .input-group  {
+    position: relative;
+    font-family: var(--font-500);
+    display: flex;
+    flex-direction: column;
+}
+
+.iAMgQU {
+    height: var(--indent-m);
+}
+
+.euvyga {
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    color: rgb(102, 102, 102);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.05em;
+    font-family: var(--font-500);
+}
+
+.dyNtUa {
+    height: var(--indent-s);
+}
+
+@media (hover: hover){
+  .dFMpRu:hover {
+    box-shadow: rgba(33, 33, 33, 0.2) 0px 4px 8px;
+    background: var(--dark-blue-gradient);
+  }
+}
+
+.auth-modal .auth-local .switch-form-container  {
+    display: flex;
+    align-items: center;
+    font-size: .95rem;
+}
+
+.auth-modal .auth-local .forgot-password-button  {
+    font-size: .9rem;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+@media (hover: hover){
+  .jWdkTB:hover {
+    box-shadow: none;
+    background: transparent;
+  }
+}
+
+.jJuENG {
+    padding: 8px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.khsHpT {
+    width: var(--indent-xs);
+}
+
+.auth-modal .auth-local .switch-form-container .switch-form-button  {
+    padding: 0;
+}
+
+.isesWM {
+    padding: 0px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.iEnqmq {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-BYboO.style-BYboO {
+   position: relative;
+    inset: 0px;
+    border: none;
+    background: rgb(255, 255, 255);
+    overflow: visible;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px;
+}
+#style-jN6ds.style-jN6ds {
+   opacity: 1;
+}
+#style-LNdw5.style-LNdw5 {
+   width: 100%;
+}
+#style-MzIC8.style-MzIC8 {
+   opacity: 1;
+}
+#style-d7SUU.style-d7SUU {
+   opacity: 1;
 }

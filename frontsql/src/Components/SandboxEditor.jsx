@@ -6,10 +6,19 @@ import "ace-builds/src-noconflict/theme-github";
 import {Button} from "./Button";
 
 const SandboxEditor = ({setQuery, value, setValue, isOpen, databaseId, databaseSchema}) => {
+    const [item, setItem] = useState('');
+    let [btn_item, setBtnItem] = useState('');
     const onChange = (newValue) => {
+        console.log(newValue)
+        console.log('onChange',value, newValue)
         setValue(newValue);
-        value = newValue;
+        setItem(newValue)
+        const btn_item_1 = newValue
     };
+
+    useEffect(()=>{
+        setItem(value)
+    }, [value])
 
     const [table_data, setTableData] = useState([]);
     const [table_columns, setTableColumns] = useState([]);
@@ -47,15 +56,14 @@ const SandboxEditor = ({setQuery, value, setValue, isOpen, databaseId, databaseS
           )
         }
 
-
+        console.log("execute_query_response ", value)
         const execute_query_response = await fetch(
             "/api/databases.execute",
             {
-                credentials: "same-origin",
                 method: "POST",
                 body: JSON.stringify(
                     {
-                        query: value,
+                        query: item,
                         database: databaseId,
                     }
                 ),
@@ -104,23 +112,23 @@ const SandboxEditor = ({setQuery, value, setValue, isOpen, databaseId, databaseS
                         showLineNumbers
                     />
                 </div>
-                <Button handleClick={onSubmit} iconName="fas fa-play">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6 inline mr-2"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                    >
-                        <title id="run">run query</title>
-                        <path
-                            fillRule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                            clipRule="evenodd"
-                        />
-                    </svg>
-                    {" "}
-                    Run Query
-                </Button>
+                <Button handleClick={onSubmit} iconName="fas fa-play" />
+                {/*    <svg*/}
+                {/*        xmlns="http://www.w3.org/2000/svg"*/}
+                {/*        className="h-6 w-6 inline mr-2"*/}
+                {/*        viewBox="0 0 20 20"*/}
+                {/*        fill="currentColor"*/}
+                {/*    >*/}
+                {/*        <title id="run">Отправить запрос</title>*/}
+                {/*        <path*/}
+                {/*            fillRule="evenodd"*/}
+                {/*            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"*/}
+                {/*            clipRule="evenodd"*/}
+                {/*        />*/}
+                {/*    </svg>*/}
+                {/*    {" "}*/}
+                {/*    Отправить запрос*/}
+                {/*</Button>*/}
             </div>
             <div className="split-view-view allotment-module_splitViewView__MGZ6O split-view-view-visible style-oipDm"
                  data-testid="split-view-view" id="style-oipDm">

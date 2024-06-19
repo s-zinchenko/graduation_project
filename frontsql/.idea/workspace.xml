@@ -2,57 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e7591f4-8350-41c6-af02-0e98e8c5e901" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../backend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/AuthModal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/AuthModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/ERDiagram.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/ERDiagram.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Sandbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Sandbox.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/SandboxEditor.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/TableNode.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/TableNode.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/TaskDetails.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/TaskList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupProxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/graduation_project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../backend/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/default_avatar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/public.abK9xQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/backend/application/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/application/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/application/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/application/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/course/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/course/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/backend/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/course/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend/user/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/user/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/databases/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/databases/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/user/backends.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/user/backends.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/user/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/user/mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/backend/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/user/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/backend/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/backend/user/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/frontsql.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AuthModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AuthModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AuthModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/AuthModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SqlEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TaskEditor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ERDiagram.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ERDiagram.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sandbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sandbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sandbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sandbox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/SandboxEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SandboxEditor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TableNode.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TableNode.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TaskDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TaskDetails.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/TaskDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TaskDetails.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TaskList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TaskList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TaskEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TaskEditor.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +75,15 @@
     &quot;ts.external.directory.path&quot;: &quot;/Applications/PyCharm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Components/static" />
+      <recent name="$PROJECT_DIR$/src/Components" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -106,6 +109,14 @@
       <workItem from="1716045665206" duration="6935000" />
       <workItem from="1716110337419" duration="9597000" />
       <workItem from="1716303205208" duration="1140000" />
+      <workItem from="1717234696768" duration="570000" />
+      <workItem from="1717572554149" duration="1769000" />
+      <workItem from="1717583430382" duration="4702000" />
+      <workItem from="1717608404733" duration="7400000" />
+      <workItem from="1717651531166" duration="178000" />
+      <workItem from="1717694776048" duration="2412000" />
+      <workItem from="1717776721382" duration="4538000" />
+      <workItem from="1718261395357" duration="123000" />
     </task>
     <servers />
   </component>
@@ -126,13 +137,8 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/Components/SandboxEditor.jsx</url>
-          <line>9</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/Components/TaskEditor.jsx</url>
-          <line>172</line>
+          <line>198</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

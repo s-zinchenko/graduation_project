@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_celery_beat",
-    "corsheaders"
+    "corsheaders",
+    "social_django",
 ]
 
 PROJECT_APPS = [
@@ -67,6 +68,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "social_django.context_processors.backends",
             ],
         },
     },
@@ -103,8 +105,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LAZY_SIGNUP_BACKEND = "backend.user.backends.LazySignupBackend"
 AUTHENTICATION_BACKENDS = (
+    # 'social_core.backends.vk.VKOAuth2',
     "django.contrib.auth.backends.ModelBackend",
-    LAZY_SIGNUP_BACKEND,
+    # "backend.user.backends.CustomVKOAuth2",
+    # LAZY_SIGNUP_BACKEND,
 )
 
 AUTH_USER_MODEL = "user.User"
@@ -196,3 +200,9 @@ CELERY_TIMEZONE = "Europe/Moscow"
 # APPLICATION SETTINGS
 USER_DATABASE_SSESSION_ACTIVE_HOURS = env.int("USER_DATABASE_SSESSION_LIFESPAN", default=12)
 USER_DATABASE_SSESSION_OPERATIONS_COUNT = env.int("USER_DATABASE_SSESSION_OPERATIONS_COUNT", default=100)
+
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = '7948084'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'ePuRja9BYrOsuq62qL2I'
+
+LOGIN_REDIRECT_URL = "http://localhost:3000/profile"

@@ -7,7 +7,7 @@ export default memo(({data, isConnectable}) => {
         <>
             <div className="table-node">
                 <div className="table-node__title">{data.title}</div>
-                <p>{data.description}</p>
+                {/*<p>{data.description}</p>*/}
                 {data.props.map((prop, index) => (
                     <div className="table-field">
                         <Handle type="source" id={`column-${data.title}-${prop.name}-source`}
@@ -19,12 +19,12 @@ export default memo(({data, isConnectable}) => {
                                 isConnectable={isConnectable}
                         />
 
-                        {prop.is_key &&
-                        <>
-                            'PK'
-                        <div width="6px" className="sc-edce251-0 fZHVVv"></div>
-                        </>
-                        }
+                        {/*{prop.is_key &&*/}
+                        {/*<>*/}
+                        {/*    'PK'*/}
+                        {/*<div width="6px" className="sc-edce251-0 fZHVVv"></div>*/}
+                        {/*</>*/}
+                        {/*}*/}
                         <div className="table-field__container">
                             <div className="table-field__name">{prop.name}</div>
                             <div width="6px" className="sc-edce251-0 fZHVVv"></div>

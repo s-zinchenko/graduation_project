@@ -64,7 +64,7 @@ body {
 
 .trainer {
     overflow-y: hidden;
-    padding-top: var(--header-height);
+    /*padding-top: var(--header-height);*/
 }
 
 .__react_component_tooltip {
@@ -2087,7 +2087,7 @@ svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa {
 
 .jNPRZP {
     display: flex;
-    padding: 0px 10px;
+    padding: 10px;
 }
 
 .bYbnDd {
@@ -2099,7 +2099,24 @@ svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa {
     background-color: var(--green);
     box-shadow: none;
     box-sizing: border-box;
-    height: var(--visible-height);
+    /*height: var(--visible-height);*/
+    border-radius: var(--border-radius-m);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    transition: box-shadow 0.2s ease-in-out 0s;
+}
+
+.bYbnDd-1 {
+    --visible-height: var(--content-height);
+    --line-height: 1.2em;
+    --vertical-indent: calc((var(--visible-height) - var(--line-height)) / 2);
+    transform: translateZ(0px) scale(1, 1);
+    color: var(--white);
+    background-color: var(--primary-red);
+    box-shadow: none;
+    box-sizing: border-box;
+    /*height: var(--visible-height);*/
     border-radius: var(--border-radius-m);
     overflow: hidden;
     display: flex;
@@ -2110,6 +2127,7 @@ svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa {
 .bslxpG {
     position: absolute;
     bottom: 0px;
+    z-index: 100;
 }
 
 .boOZQr {
@@ -2125,7 +2143,7 @@ svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa {
 }
 
 .hIwpnE {
-    overflow: hidden;
+    /*overflow: hidden;*/
     display: inline-block;
     padding: var(--vertical-indent) 0;
     font-size: 1em;
@@ -2135,6 +2153,15 @@ svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa {
 
 .fmxQNo {
     box-shadow: 0 -4px 10px 0 var(--green);
+    position: absolute;
+    bottom: calc(var(--visible-height) * -1);
+    left: 0px;
+    right: 0px;
+    height: var(--visible-height);
+}
+
+.fmxQNo1 {
+    box-shadow: 0 -4px 10px 0 var(--primary-red);
     position: absolute;
     bottom: calc(var(--visible-height) * -1);
     left: 0px;

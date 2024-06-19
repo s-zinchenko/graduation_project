@@ -79,6 +79,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         null=True,
         blank=True,
     )
+    email = models.CharField(verbose_name="Email", null=True, blank=True)
 
     USERNAME_FIELD = "username"
 

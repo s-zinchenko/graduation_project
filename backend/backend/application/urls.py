@@ -37,6 +37,7 @@ urlpatterns = [
                     include("backend.course.urls"),
                 ),
                 path("swagger.json", swagger_index),
+                path('', include('social_django.urls')),
             ]
         ),
     ),

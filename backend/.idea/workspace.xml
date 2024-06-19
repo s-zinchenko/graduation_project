@@ -2,62 +2,63 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d8e5dcf-173e-4f20-ac83-8018ecc8b1a5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/AuthModal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/AuthModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/ERDiagram.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/ERDiagram.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Main.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Profile.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Sandbox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/Sandbox.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/SandboxEditor.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/TableNode.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/TableNode.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskDetails.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontsql/src/setupProxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/graduation_project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontsql/public/default_avatar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c13f904d-16d5-40d4-896f-d09ca74f0935/storage_v2/_src_/database/demo.4_0uAA/schema/public.abK9xQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3fef88c-a587-4639-be7c-9d40913cae43/storage_v2/_src_/database/demo_small.q78Hvw/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/application/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/application/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/application/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/application/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/course/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/course/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/course/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/databases/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/databases/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/databases/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/databases/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/user/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/user/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/databases/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/databases/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/databases/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/user/backends.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/user/backends.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/user/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/user/mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/user/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/user/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/frontsql.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/AuthModal.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/AuthModal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/AuthModal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/AuthModal.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/Button.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/Button.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/SqlEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskEditor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/ERDiagram.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/ERDiagram.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/Sandbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/Sandbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/Sandbox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/Sandbox.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/SandboxEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/SandboxEditor.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/TableNode.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/TableNode.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/TaskDetails.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskDetails.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/TaskDetails.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskDetails.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/TaskList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontsql/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontsql/src/Components/TaskEditor.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontsql/src/Components/TaskEditor.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -75,6 +76,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/svzinchenko/Desktop/Developer/graduation_project/backend&quot;
   },
@@ -136,6 +138,14 @@
       <workItem from="1716045665770" duration="6184000" />
       <workItem from="1716110319905" duration="3345000" />
       <workItem from="1716303246882" duration="955000" />
+      <workItem from="1717234669898" duration="581000" />
+      <workItem from="1717572525980" duration="810000" />
+      <workItem from="1717583400977" duration="631000" />
+      <workItem from="1717608388314" duration="4618000" />
+      <workItem from="1717651528446" duration="181000" />
+      <workItem from="1717694876552" duration="4155000" />
+      <workItem from="1717776685654" duration="9467000" />
+      <workItem from="1718261376714" duration="146000" />
     </task>
     <servers />
   </component>
@@ -207,7 +217,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/backend/user/views.py</url>
-          <line>31</line>
+          <line>32</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -217,8 +227,63 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/backend/user/views.py</url>
-          <line>68</line>
+          <line>69</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/backends/vk.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/backends.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/backends.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/mixins.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/mixins.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/Library/Caches/pypoetry/virtualenvs/backend-hzBGMJgN-py3.12/lib/python3.12/site-packages/social_core/backends/base.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/backends.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/mixins.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/views.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/user/views.py</url>
+          <line>87</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/databases/utils.py</url>
+          <line>192</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

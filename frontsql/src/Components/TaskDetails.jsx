@@ -135,9 +135,6 @@ const TaskDetails = () => {
                                                 className="split-view split-view-vertical split-view-separator-border allotment-module_splitView__L-yRc allotment-module_vertical__WSwwa allotment-module_separatorBorder__x-rDS snipcss0-6-59-60">
                                                 <div
                                                     className="sash-container allotment-module_sashContainer__fzwJF snipcss0-7-60-61">
-                                                    <div
-                                                        className="sash sash-module_sash__K-9lB sash-mac sash-module_mac__Jf6OJ sash-horizontal sash-module_horizontal__kFbiw snipcss0-8-61-62 style-hFD5t"
-                                                        data-testid="sash" id="style-hFD5t"></div>
                                                 </div>
                                                 <div
                                                     className="split-view-container allotment-module_splitViewContainer__rQnVa snipcss0-7-60-63">

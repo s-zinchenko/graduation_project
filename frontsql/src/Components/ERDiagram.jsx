@@ -12,17 +12,17 @@ const ERDiagram = ({schema}) => {
         id: `node-${table.id}`,
         type: 'table',
         // position: {x: index * 500, y: index * 100},
-        position: {x: index * 500 * Math.random(1, -1), y: index * 500 * Math.random(2, -2)},
+        position: table.position,
         data: {...table},
     }));
 
 
     const edges = schema.relations.map((relation) => ({
         id: `edge-${relation.id}`,
-        sourceHandle: `column-${schema.tables.find((table) => table.title === relation.source.table).title}-${schema.tables.find((table) => table.title === relation.source.table).props.find((prop) => prop.name === relation.source.field).name}-source`,
-        targetHandle: `column-${schema.tables.find((table) => table.title === relation.target.table).title}-${schema.tables.find((table) => table.title === relation.target.table).props.find((prop) => prop.name === relation.target.field).name}-target`,
-        source: `node-${schema.tables.find((table) => table.title === relation.source.table).id}`,
-        target: `node-${schema.tables.find((table) => table.title === relation.target.table).id}`,
+        sourceHandle: `column-${schema.tables.find((table) => table.title === relation.source.table_name).title}-${schema.tables.find((table) => table.title === relation.source.table_name).props.find((prop) => prop.name === relation.source.field_name).name}-source`,
+        targetHandle: `column-${schema.tables.find((table) => table.title === relation.target.table_name).title}-${schema.tables.find((table) => table.title === relation.target.table_name).props.find((prop) => prop.name === relation.target.field_name).name}-target`,
+        source: `node-${schema.tables.find((table) => table.title === relation.source.table_name).id}`,
+        target: `node-${schema.tables.find((table) => table.title === relation.target.table_name).id}`,
         // type: relation.type,
         // label: relation.type,
         markerStart: {

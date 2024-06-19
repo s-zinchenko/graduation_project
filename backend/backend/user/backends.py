@@ -1,8 +1,10 @@
 from typing import Any, Optional
 
-from django.contrib.auth import get_user_model
+from django.contrib.auth import get_user_model, authenticate, SESSION_KEY, login
 from django.contrib.auth.backends import ModelBackend
 from django.core.handlers.wsgi import WSGIRequest
+from social_core.backends.vk import VKOAuth2
+from social_core.utils import handle_http_errors
 
 from backend.user.models import User
 
@@ -30,5 +32,15 @@ class LazySignupBackend(ModelBackend):
         except self.user_class.DoesNotExist:
             user = None
         else:
-            user.backend = "equalt.application.backends.LazySignupBackend"
+            user.backend = "backend.user.backends.LazySignupBackend"
         return user
+
+
+class CustomVKOAuth2(VKOAuth2):
+    def auth_complete(self, *args, **kwargs):
+        # kwargs.pop("user", None)
+        res = super().auth_complete(*args, **kwargs)
+        # kwargs["request"].user = None
+        # kwargs["request"].session[SESSION_KEY] = res.id
+        # login(kwargs["request"], res)
+        return res

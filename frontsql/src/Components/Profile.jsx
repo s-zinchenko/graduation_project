@@ -8,6 +8,7 @@ import CalendarHeatmap from "react-calendar-heatmap";
 const Profile = () => {
     const [userData, setUserData] = useState({id: 1, date_joined: ""})
     const [userStats, setUserStats] = useState([])
+    const [readableDate, setReadableDate] = useState(new Date("2014-07-04T18:06:08-07:00"))
 
 
     useEffect(() => {
@@ -20,6 +21,10 @@ const Profile = () => {
 
             setUserStats(stats_data.data)
             setUserData(current_data.data)
+
+            let date123 = new Date(userData.date_joined)
+            setReadableDate(date123)
+
         }
         fetchUserInfo()
         console.log(userData)
@@ -33,8 +38,7 @@ const Profile = () => {
                 <div className="wrapper">
                     <div className="main">
                         <div className="profile__sidebar">
-                            {/*<div className="sidebar_avatar"><img src="https://sql-academy.org/static/profile.jpg"/>*/}
-                            <div className="sidebar_avatar"><img src=""/>
+                            <div className="sidebar_avatar"><img src="/default_avatar.jpg"/>
                             </div>
                             <div className="sidebar_user-info">
                                 <div className="sidebar_username">Пользователь #{userData.id}</div>
@@ -48,10 +52,13 @@ const Profile = () => {
                                 <h2 className="sc-f8db33bd-0 khEKv">Основная информация</h2>
                                 <div className="sc-f8db33bd-1 bxNhCe"><span
                                     className="sc-f8db33bd-2 iVHEAw">Присоединился </span><span
-                                    className="sc-f8db33bd-3 dSHKGE">{userData.date_joined}</span></div>
+                                    // className="sc-f8db33bd-3 dSHKGE">{userData.date_joined}</span></div>
+                                    // className="sc-f8db33bd-3 dSHKGE">2024.{readableDate.getMonth()}.{readableDate.getDay()}</span></div>
+                                    className="sc-f8db33bd-3 dSHKGE">2024.06.09</span></div>
                             </div>
                             <div className="sc-55afef06-0 gcHSTq profile-activity">
-                                <div className="sc-6d7a1e9b-1 iPUHNu">2 активностей за последние 9 месяцев</div>
+                                {/*<div className="sc-6d7a1e9b-1 iPUHNu">{userStats.length} активностей за последние 9 месяцев</div>*/}
+                                <div className="sc-6d7a1e9b-1 iPUHNu">{userStats.length} активность за последние 9 месяцев</div>
                                 <div height="var(--indent-l)" className="sc-edce251-0 ehhlUV"></div>
                                 <div className="sc-6d7a1e9b-0 gxEqoW">
                                     <div className="scrollable-container-wrapper style-67GVg" id="style-67GVg">

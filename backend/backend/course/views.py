@@ -79,8 +79,8 @@ class TaskAnswerView(LazyLoginMixin, ApiView):
                 task_id=practical_task.id,
                 defaults={"status": UserTask.Status.IN_PROGRESS},
             )
-            if user_task.status == UserTask.Status.COMPLETED:
-                raise HttpError(http_code=400, alias="bad_request", description="Task already completed")
+            # if user_task.status == UserTask.Status.COMPLETED:
+            #     raise HttpError(http_code=400, alias="bad_request", description="Task already completed")
 
             user_database_session = UserDatabaseSession.objects.filter(
                 user_id=request.user.id,

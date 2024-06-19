@@ -8,6 +8,7 @@ import {Button} from "./Button";
 const TaskEditor = ({setQuery, value, setValue, isOpen, databaseId, taskId}) => {
     // let [isCorrectTask, setIsCorrectTask] = useState(false)
     let [isCorrectTask, setIsCorrectTask] = useState(false)
+    let [isShowIncorrectTask, setisShowIncorrectTask] = useState(false)
 
     const onChange = (newValue) => {
         setValue(newValue);
@@ -65,7 +66,13 @@ const TaskEditor = ({setQuery, value, setValue, isOpen, databaseId, taskId}) => 
 
         console.log(execute_query_json)
 
-        setIsCorrectTask(() => execute_query_json.data.is_correct)
+        if (execute_query_json.data.is_correct === true) {
+            setIsCorrectTask(true)
+            setisShowIncorrectTask(false)
+        } else {
+            setisShowIncorrectTask(true)
+            setIsCorrectTask(false)
+        }
 
     };
 
@@ -116,6 +123,25 @@ const TaskEditor = ({setQuery, value, setValue, isOpen, databaseId, taskId}) => 
                         </div>
                     </div>
                 }
+                {isShowIncorrectTask &&
+                    <div className="sc-21e9fcb5-2 fwQAeW snipcss0-11-117-118 snipcss0-13-149-150">
+                        <div className="sc-21e9fcb5-1 boOZQr">
+                            <div tabIndex="0" className="sc-12f6b33c-0 bYbnDd-1 sc-21e9fcb5-3 bslxpG"
+                                 style={{opacity: 1, height: "45px"}}>
+                                <div className="sc-12f6b33c-1 jNPRZP">
+                                    <div className="sc-12f6b33c-3 jQblow"><span className="sc-12f6b33c-4 fKWUuL"><svg
+                                        aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle-check"
+                                        className="svg-inline--fa fa-circle-check " role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor"
+                                                                                                       d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"></path></svg></span>
+                                    </div>
+                                    <div className="sc-12f6b33c-2 hIwpnE">Решение неверно</div>
+                                    {/*<div className="sc-12f6b33c-5 fmxQNo1"></div>*/}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
                 <Button handleClick={onSubmit} iconName="fas fa-play">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +149,7 @@ const TaskEditor = ({setQuery, value, setValue, isOpen, databaseId, taskId}) => 
                         viewBox="0 0 20 20"
                         fill="currentColor"
                     >
-                        <title id="run">run query</title>
+                        <title id="run">Отправить запрос</title>
                         <path
                             fillRule="evenodd"
                             d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
@@ -131,7 +157,7 @@ const TaskEditor = ({setQuery, value, setValue, isOpen, databaseId, taskId}) => 
                         />
                     </svg>
                     {" "}
-                    Run Query
+                    Отправить запрос
                 </Button>
             </div>
             <div className="split-view-view allotment-module_splitViewView__MGZ6O split-view-view-visible style-oipDm"
@@ -139,8 +165,8 @@ const TaskEditor = ({setQuery, value, setValue, isOpen, databaseId, taskId}) => 
                 <div className="scrollable-container-wrapper query-table-scrollbars style-hPj9E" id="style-hPj9E">
                     <div className="style-MqnoA" id="style-MqnoA">
                         <div className="result-table line-break">
-                            {!isCorrectTask && <div className="empty-query snipcss0-11-145-146">Здесь будет результат вашего
-                                запроса</div>}
+                            {/*{!isCorrectTask && <div className="empty-query snipcss0-11-145-146">Здесь будет результат вашего*/}
+                            {/*    запроса</div>}*/}
 
                             {/*{isCorrectTask &&*/}
                             {/*    <table>*/}

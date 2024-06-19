@@ -654,6 +654,42 @@ svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa {
   }
 }
 
+.custom-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  background-color: #f0f0f0; /* Светло-серый цвет фона */
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  border: none;
+  position: relative; /* Необходимо для позиционирования подсказки */
+}
+
+.custom-button:hover {
+  background-color: #444; /* Светло-черный цвет фона при наведении */
+  color: #fff;
+}
+
+.custom-button:hover::before {
+  content: "Ctrl + Enter";
+  position: absolute;
+  top: -30px; /* Расстояние от кнопки до подсказки */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1; /* Устанавливаем слой для отображения поверх кнопки */
+}
+
+
 .dOPLZo button  {
     padding: 20px;
     font-size: 1.1em;
@@ -1323,3 +1359,4 @@ svg:not(:host).svg-inline--fa,svg:not(:root).svg-inline--fa {
 #style-XJ9T7.style-XJ9T7 {
    transform: translateY(20px);
 }
+

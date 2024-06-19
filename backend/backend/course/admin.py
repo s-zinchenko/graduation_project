@@ -175,6 +175,12 @@ class PracticalTaskAdmin(admin.ModelAdmin):
 
 @admin.register(UserTask)
 class UserTaskAdmin(admin.ModelAdmin):
+    list_display = [
+        "task",
+        "user",
+        "status",
+    ]
+
     def get_queryset(self, request):
         if request.user.is_superuser:
             return super().get_queryset(request)

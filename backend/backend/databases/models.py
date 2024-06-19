@@ -14,15 +14,18 @@ class DatabaseManager(models.Manager):
             database.save()
             props = {}
             tables = {}
+            i = 0
             for table_schema in data["tables"]:
                 if table_schema["name"] == "alembic_version":
                     continue
 
+                i += 1
                 table = Table(
                     title=table_schema["title"],
                     name=table_schema["name"],
                     description=table_schema["description"],
                     database=database,
+                    position={"x": 100 * i, "y": 350 * i}
                 )
                 table.save()
                 tables[table.name] = table
@@ -55,6 +58,7 @@ class DatabaseManager(models.Manager):
                         type=relation["type"],
                         source=source,
                         target=target,
+                        database=database
                     )
                 )
             Relation.objects.bulk_create(relations)
@@ -88,6 +92,7 @@ class Table(models.Model):
     name = models.CharField(max_length=128, verbose_name="Внутреннее имя")
     description = models.TextField(verbose_name="Описание таблицы")
     database = models.ForeignKey("databases.Database", on_delete=models.CASCADE, verbose_name="База данных")
+    position = models.JSONField(verbose_name="Координаты на плоскости", null=True)
 
     def __str__(self) -> str:
         return f"Таблица {self.title} (база данных: {self.database.name})"
@@ -118,6 +123,8 @@ class Relation(models.Model):
     type = models.CharField(max_length=128, verbose_name="Тип")
     database = models.ForeignKey("databases.Database", on_delete=models.CASCADE, verbose_name="База данных", null=True)
 
+    def __str__(self):
+        return f"{self.source} {self.target} {self.type} {self.database}"
 
 class TableRelationParticipant(models.Model):
     class Meta:
@@ -126,6 +133,9 @@ class TableRelationParticipant(models.Model):
 
     table = models.ForeignKey("databases.Table", on_delete=models.CASCADE, verbose_name="Таблица")
     field = models.ForeignKey("databases.Prop", on_delete=models.CASCADE, verbose_name="Поле")
+
+    def __str__(self):
+        return f"{self.table} {self.field}"
 
 
 class UserDatabaseSession(models.Model):

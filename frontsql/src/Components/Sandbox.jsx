@@ -103,7 +103,7 @@ const Sandbox = () => {
                                                         {/*            fill="var(--text-color-primary)"></path>*/}
                                                         {/*    </svg>*/}
                                                         {/*</div>*/}
-                                                        <select onChange={handleOptionChange}>
+                                                        <select className={"custom-select"} onChange={handleOptionChange}>
                                                             {options.map((item) => (
                                                                 <option key={item.id} value={item.id}>
                                                                     {item.title}

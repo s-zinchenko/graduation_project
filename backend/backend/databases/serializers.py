@@ -224,6 +224,7 @@ class TableItemSerializer(Serializer):
     title = fields.Str()
     description = fields.Str()
     props = fields.Nested(PropItemSerializer(), many=True)
+    position = fields.Raw()
 
     @pre_dump
     def prepare(self, obj: Table, *args: Any, **kwargs: Any) -> Table:

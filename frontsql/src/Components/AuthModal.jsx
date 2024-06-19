@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './AuthModal.css';
 
 const AuthModal = () => {
@@ -10,6 +10,7 @@ const AuthModal = () => {
     const [name, setName] = useState('');
     const [isLogin, setIsLogin] = useState(true);
     const [error, setError] = useState('');
+    const [isLazy, setIsLazy] = useState(null);
 
     const openModal = () => {
         setisModalOpen(true);
@@ -57,6 +58,27 @@ const AuthModal = () => {
         localStorage.setItem('userIsLazy', data.data.is_lazy);
     }
 
+    useEffect(() => {
+    // React advises to declare the async function directly inside useEffect
+    async function getIsLazy() {
+        const user_current_response = await fetch(
+            "/api/user.current",
+        )
+        const data = await user_current_response.json();
+
+        localStorage.setItem('userId', data.data.id);
+        localStorage.setItem('userIsLazy', data.data.is_lazy);
+
+        setIsLazy(data.data.is_lazy)
+    };
+
+    // You need to restrict it at some point
+    // This is just dummy code and should be replaced by actual
+    if (isLazy === null) {
+        getIsLazy();
+    }
+  }, []);
+
 
     const login = async (e) => {
         try {
@@ -98,25 +120,20 @@ const AuthModal = () => {
         setAuthType(type);
     };
 
-    const isLazy = check_is_lazy()
-
     return (
         <>
             <div className="header__auth">
                 <div className="auth__links">
-                    {/*{localStorage.getItem("userIsLazy") && (*/}
-                    {/*{isLazy && (*/}
-                    {/*    <div className="link__signin" onClick={openModal}>*/}
-                    {/*        Войти*/}
-                    {/*    </div>*/}
-                    {/*)}*/}
-                    {/*{!localStorage.getItem("userIsLazy") && (*/}
-                    {/*{!isLazy && (*/}
-                    {isLazy && (
+                    {isLazy === undefined && (
+                        <div className="link__signin" onClick={openModal}>
+                            Войти
+                        </div>
+                    )}
+                    {isLazy != undefined && !isLazy && (
                         <>
                             <div className="header__toggle" onClick={openMenu}>
                                 <div className="profile__icon"><img alt="avatar"
-                                                                    // src="https://sql-academy.org/static/profile.jpg"/>
+                                                                    src="/default_avatar.jpg"
                                                                     />
                                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star"
                                          className="svg-inline--fa fa-star " role="img"
@@ -212,7 +229,7 @@ const AuthModal = () => {
                                                                 <div className="login-btn">
                                                                     <button type="submit" kind="primary" shape="rounded"
                                                                             data-testid="register-form-submit-button"
-                                                                            className="sc-ac123477-0 dFMpRu style-RX74V"
+                                                                            className="sc-ac123477-0 dFMpRu custom-auth-button style-RX74V"
                                                                             disabled=""
 
                                                                             id="style-RX74V">
@@ -233,13 +250,13 @@ const AuthModal = () => {
                                                                              className="sc-edce251-0 khsHpT"></div>
                                                                         <button type="button" kind="link"
                                                                                 shape="rounded"
-                                                                                className="sc-ac123477-0 jWdkTB switch-form-button"
+                                                                                className="sc-ac123477-0 custom-auth-button switch-form-button"
                                                                                 data-testid="register-form-switch-button"
                                                                                 onClick={() => handleAuthTypeClick('signIn')}>
                                                                             <div kind="link"
                                                                                  className="sc-ac123477-2 isesWM">
                                                                                 <div
-                                                                                    className="sc-ac123477-5 iEnqmq style-wPqO7"
+                                                                                    className="sc-ac123477-5 iEnqmq  style-wPqO7"
                                                                                     id="style-wPqO7">Войти
                                                                                 </div>
                                                                             </div>
@@ -250,7 +267,13 @@ const AuthModal = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div height="var(--indent-l)" className="sc-edce251-0 ehhlUV"></div>
+                                                <div className="sc-edce251-0 ehhlUV"></div>
+                                                <div className="auth-split"><span className="text">ИЛИ</span></div>
+                                                <div className="sc-edce251-0 ehhlUV"></div>
+                                                <div className="social-buttons"><a href="http://127.0.0.1:8000/api/login/vk-oauth2">
+                                                    <div className="social-button social-button_vk"></div>
+                                                </a></div>
+                                                <div className="sc-edce251-0 ehhlUV"></div>
                                                 <div className="terms-of-use">
                                                     Продолжая, вы соглашаетесь с<br/><a href="/ru/terms-of-use">пользовательским
                                                     соглашением</a>
@@ -304,7 +327,7 @@ const AuthModal = () => {
                                                                 <div className="login-btn">
                                                                     <button type="submit" kind="primary" shape="rounded"
                                                                             data-testid="register-form-submit-button"
-                                                                            className="sc-ac123477-0 dFMpRu style-RX74V"
+                                                                            className="sc-ac123477-0 dFMpRu custom-auth-button style-RX74V"
                                                                             disabled=""
                                                                             id="style-RX74V">
                                                                         {/* запрос на логин */}
@@ -323,7 +346,7 @@ const AuthModal = () => {
                                                                              className="sc-edce251-0 khsHpT"></div>
                                                                         <button type="button" kind="link"
                                                                                 shape="rounded"
-                                                                                className="sc-ac123477-0 jWdkTB switch-form-button"
+                                                                                className="sc-ac123477-0 custom-auth-button switch-form-button"
                                                                                 data-testid="register-form-switch-button"
                                                                                 onClick={() => handleAuthTypeClick('signUp')}>
                                                                             <div kind="link"
@@ -340,7 +363,13 @@ const AuthModal = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div height="var(--indent-l)" className="sc-edce251-0 ehhlUV"></div>
+                                                <div className="sc-edce251-0 ehhlUV"></div>
+                                                <div className="auth-split"><span className="text">ИЛИ</span></div>
+                                                <div className="sc-edce251-0 ehhlUV"></div>
+                                                <div className="social-buttons"><a href="http://127.0.0.1:8000/api/login/vk-oauth2">
+                                                    <div className="social-button social-button_vk"></div>
+                                                </a></div>
+                                                <div className="sc-edce251-0 ehhlUV"></div>
                                                 <div className="terms-of-use">
                                                     Продолжая, вы соглашаетесь с<br/><a href="/ru/terms-of-use">пользовательским
                                                     соглашением</a>
